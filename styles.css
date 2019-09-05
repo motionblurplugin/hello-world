@@ -1,17 +1,10 @@
-* {
-  margin:0px;
-  padding:0px;
+/* This is a simple plugin to create motion blur effect that you can easily use on your sites and projects. */
+
+.text--inner {
+      transform: scale(1, var(--blur-amount, 1)) rotate(var(--blur-direction, 0));
 }
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
-}
-
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+.text--wrapper {
+      filter: blur(calc(var(--blur-amount)*0.3px));
+      transform: rotate(calc(0deg - var(--blur-direction, 0))) scale(1, calc(1/var(--blur-amount, 1)));
 }
